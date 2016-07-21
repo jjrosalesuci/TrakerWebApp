@@ -1,0 +1,35 @@
+<div class="container starter-template">
+  
+  <div class="row">
+   <ul class="nav nav-tabs">
+	  <li><a href="#">Dispositivos</a></li>
+	  <li><a ui-sref="deviceAdd">Adicionar</a></li>
+	  <li class="active"><a ui-sref="devicePosition">Posicion actual</a></li>	 
+   </ul>
+  </div>
+  <br>
+
+<body>
+  
+  <div id="divMapa" style="height:400px"></div>
+  <script>
+  
+    map = new OpenLayers.Map("divMapa");
+    map.addLayer(new OpenLayers.Layer.OSM());
+
+    var lonLat = new OpenLayers.LonLat(-56.1873176,-34.8927991 )
+          .transform(
+            new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+            map.getProjectionObject() // to Spherical Mercator Projection
+          );
+          
+    var zoom=16;
+
+    var markers = new OpenLayers.Layer.Markers( "Markers" );
+    map.addLayer(markers);
+    markers.addMarker(new OpenLayers.Marker(lonLat));
+    map.setCenter (lonLat, zoom);
+    
+ </script>
+</body>
+</div>
