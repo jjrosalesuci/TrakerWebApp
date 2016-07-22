@@ -1,0 +1,59 @@
+
+ <div class="container starter-template">
+ 
+ 
+        <ul class="nav nav-tabs">
+            <li><a ui-sref="deviceList">Dispositivos</a></li>
+            <li><a ui-sref="deviceAdd">Adicionar</a></li>
+            <li class="active"><a ui-sref="deviceEdit">Editar</a></li>
+            <li><a ui-sref="userProfile">Mi perf&iacute;l</a></li>	 
+        </ul>
+ 
+   <br>  
+   {{selectedItem}}
+	<div class="row clearfix">		
+		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-12  column col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+		<form class="form-horizontal" name="deviceEditForm">
+            	
+				<div class="form-group">
+				      <label class="col-md-1 control-label" for="code">Codigo</label>  
+					  <div class="col-md-3">
+						<input id="code" ng-model="formData.code" name="code" type="text"  placeholder="Ingrese el código" class="form-control input-md" required 
+                        data-ng-class='{ error: deviceEditForm.code.$invalid }'>
+                      </div>
+                      
+					  <label class="col-md-1 control-label" for="registration">Matricula</label>  
+					  <div class="col-md-3">
+						<input id="registration" ng-model="formData.registration"  name="registration" type="text" placeholder="" class="form-control input-md">
+					  </div>	
+				 </div>
+				 
+				 <div class="form-group">
+					  <label class="col-md-1 control-label" for="brand">Marca</label>  
+					  <div class="col-md-3">
+						<input id="brand" ng-model="formData.brand" name="brand" type="text"  placeholder="Ingrese la marca" class="form-control input-md" required
+                        data-ng-class='{ error: deviceEditForm.brand.$invalid }'>
+					  </div>
+                      
+					   <label class="col-md-1 control-label" for="model">Modelo</label>  
+					  <div class="col-md-3">
+						<input id="model" ng-model="formData.model"  name="model" type="text"  placeholder="Ingrese el modelo" class="form-control input-md" required
+                        data-ng-class='{ error: deviceEditForm.model.$invalid }'>
+					  </div>
+				</div>
+				 
+				<!-- Button (Double) -->
+				<div class="form-group">
+				  <label class="col-md-1 control-label" for="button1id"></label>
+				  <div class="col-md-2">
+					<button id="button1id" name="button1id" ng-click="submitFormEditDevice(formData)" data-ng-disabled='!deviceEditForm.$valid' class="btn btn-success">Aceptar</button>
+					<button id="button2id" name="button2id" class="btn btn-danger">Cancelar</button>
+				  </div>
+				</div>
+                
+                <div ng-init="loadSelection()"></div>
+	    <form>
+		
+	  </div>
+    </div>
+ </div>

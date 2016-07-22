@@ -13,11 +13,11 @@ angular.module('angularwebApp', [
     'ui.router'
 ]).config(function ($stateProvider, $urlRouterProvider, $authProvider) {      
     // Parametros de configuración
-    $authProvider.loginUrl = "http://correo.cmkx.icrt.cu:3000/visor-coordenadas/web/index.php?r=site/auth";
-    $authProvider.signupUrl = "http://correo.cmkx.icrt.cu:3000/visor-coordenadas/web/index.php?r=users/signup";
+    $authProvider.loginUrl = "http://192.168.1.44/TrakerBackEnd/web/index.php?r=site/auth";
+    $authProvider.signupUrl = "http://192.168.1.44/TrakerBackEnd/web/index.php?r=users/signup";
     $authProvider.tokenName = "token";
     $authProvider.tokenPrefix = "myApp";
-
+   
     $stateProvider.
         state("login", {
             url: "/login",

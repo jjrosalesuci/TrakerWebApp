@@ -11,8 +11,9 @@ function SignUpController($auth, $location) {
     var vm = this;
     this.signup = function() {
         $auth.signup({
-            email: vm.email,
-            password: vm.password
+            user     : vm.user,
+            email    : vm.email,
+            password : vm.password
         })
         .then(function() {
             // Si se ha registrado correctamente,
@@ -29,7 +30,7 @@ function LoginController($auth, $location) {
     var vm = this;
     this.login = function(){
         $auth.login({
-            email: vm.email,
+            email: vm.user,
             password: vm.password
         })
         .then(function(){
