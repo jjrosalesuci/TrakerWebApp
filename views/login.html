@@ -14,18 +14,17 @@
 	<div class="row clearfix">		
 		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-12  column col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
 		<form class="form-horizontal" ng-submit="login.login()" method="post">
-            	
 				<div class="form-group">
-				      <label class="col-md-1 control-label" for="email">Usuario</label>  
-					  <div class="col-md-3">
-						<input id="user" ng-model="login.user" name="user"  placeholder="Ingrese el usuario" class="form-control input-md" required>                       
-                      </div>
+				      <label class="col-xs-3 col-md-1 control-label" for="email">Usuario</label>  
+					  <div class="col-xs-9 col-md-3">
+				          <input id="user" ng-model="login.user" name="user"  placeholder="Ingrese el usuario" class="form-control input-md" required>                       
+                                </div>
                  </div>
                  
                  <div class="form-group">
 			             
-					  <label class="col-md-1 control-label" for="password">Contraseña</label>  
-					  <div class="col-md-3">
+					  <label class="col-xs-3 col-md-1 control-label" for="password">Contraseña</label>  
+					  <div class="col-xs-9 col-md-3">
 						<input id="password" ng-model="login.password" name="password" type="password" placeholder="Contraseña" class="form-control input-md">
 					  </div>	
 				 </div>
@@ -34,8 +33,8 @@
 				 
 				<!-- Button (Double) -->
 				<div class="form-group">
-				  <label class="col-md-1 control-label" for="button1id"></label>
-				  <div class="col-md-2">
+				  <label class="col-xs-3 control-label" for="button1id"></label>
+				  <div class="col-xs-2">
                     <button type="submit" class="btn btn-success">Autenticarse</button>
 				  </div>
 				</div>
